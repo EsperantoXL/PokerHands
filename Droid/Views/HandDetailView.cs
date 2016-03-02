@@ -14,13 +14,14 @@ using MvvmCross.Droid.Views;
 
 namespace PokerHands.Droid
 {
-    [Activity(MainLauncher = true, Icon = "@mipmap/icon")]			
-    public class HandsView : MvxActivity
+    [Activity()]			
+    public class HandDetailView : MvxActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.HandsView);
+            SetContentView(Resource.Layout.HandDetailView);
         }
     }
 }
+
