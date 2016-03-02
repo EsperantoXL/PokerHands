@@ -14,8 +14,32 @@ namespace PokerHands.iOS
 	[Register ("HandCell")]
 	partial class HandCell
 	{
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIImageView Image { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel ShortDescription { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel Title { get; set; }
+
 		void ReleaseDesignerOutlets ()
 		{
+			if (Image != null) {
+				Image.Dispose ();
+				Image = null;
+			}
+			if (ShortDescription != null) {
+				ShortDescription.Dispose ();
+				ShortDescription = null;
+			}
+			if (Title != null) {
+				Title.Dispose ();
+				Title = null;
+			}
 		}
 	}
 }

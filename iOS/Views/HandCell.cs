@@ -3,6 +3,8 @@
 using Foundation;
 using UIKit;
 using MvvmCross.Binding.iOS.Views;
+using MvvmCross.Binding.BindingContext;
+using PokerHands.Core;
 
 namespace PokerHands.iOS
 {
@@ -10,6 +12,7 @@ namespace PokerHands.iOS
     {
         public static readonly NSString Key = new NSString("HandCell");
         public static readonly UINib Nib;
+        private readonly MvxImageViewLoader _imageLoader;
 
         static HandCell()
         {
@@ -18,6 +21,19 @@ namespace PokerHands.iOS
 
         public HandCell(IntPtr handle)
             : base(handle)
+        {
+            _imageLoader = new MvxImageViewLoader(() => Image);
+            this.DelayBind(() =>
+                {
+                    var binding = this.CreateBindingSet<HandCell, Hand>();
+                    binding.Bind(_imageLoader).For(il => il.ImageUrl).To(h => h.ImageUrl);
+                    binding.Bind(Title).To(h => h.Title);
+                    binding.Bind(ShortDescription).To(h => h.ShortDescription);
+                    binding.Apply();
+                });
+        }
+
+        public HandCell()
         {
         }
     }

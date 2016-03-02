@@ -19,7 +19,7 @@ namespace PokerHands.iOS
         {
             base.ViewDidLoad();
             //we need to add a cell as well
-            var source = new MvxSimpleTableViewSource(TableView, typeof(HandCell), HandCell.Key);
+            var source = new HandsTableViewSource(TableView);
             this.AddBindings(new Dictionary<object, string>
                 {
                     { source, "ItemsSource Hands" }
