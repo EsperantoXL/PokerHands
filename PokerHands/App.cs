@@ -12,7 +12,7 @@ namespace PokerHands.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<FirstViewModel>();
+            RegisterAppStart<HandsViewModel>();
         }
     }
 }

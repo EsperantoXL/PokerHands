@@ -11,19 +11,11 @@ using UIKit;
 
 namespace PokerHands.iOS
 {
-	[Register ("HandsView")]
-	partial class HandsView
+	[Register ("HandCell")]
+	partial class HandCell
 	{
-		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
-		UITableView TableView { get; set; }
-
 		void ReleaseDesignerOutlets ()
 		{
-			if (TableView != null) {
-				TableView.Dispose ();
-				TableView = null;
-			}
 		}
 	}
 }
