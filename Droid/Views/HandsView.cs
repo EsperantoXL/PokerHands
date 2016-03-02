@@ -14,7 +14,7 @@ using MvvmCross.Droid.Views;
 
 namespace PokerHands.Droid
 {
-    [Activity(Label = "HandsView")]			
+    [Activity(MainLauncher = true, Icon = "@mipmap/icon")]			
     public class HandsView : MvxActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -28,4 +28,3 @@ namespace PokerHands.Droid
         }
     }
 }
-
