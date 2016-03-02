@@ -87,7 +87,7 @@ namespace PokerHands.Core
 
         #region IHandService implementation
 
-        public System.Collections.IEnumerable GetHands()
+        public IEnumerable<Hand> GetHands()
         {
             return _hands;
         }

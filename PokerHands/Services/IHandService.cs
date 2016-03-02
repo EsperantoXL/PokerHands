@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace PokerHands.Core
 {
@@ -8,7 +9,7 @@ namespace PokerHands.Core
     /// </summary>
     public interface IHandService
     {
-        IEnumerable GetHands();
+        IEnumerable<Hand> GetHands();
     }
 }
 

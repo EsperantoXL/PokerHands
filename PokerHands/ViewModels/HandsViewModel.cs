@@ -15,6 +15,13 @@ namespace PokerHands.Core
         {
             _handService = handService;
         }
+            
+        public override void Start()
+        {
+            base.Start();
+            var hands = _handService.GetHands();
+            Hands = new ObservableCollection<Hand>(hands);
+        }
 
         private ObservableCollection<Hand> _hands;
 
