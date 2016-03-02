@@ -22,7 +22,7 @@ namespace PokerHands.iOS
             var source = new HandsTableViewSource(TableView);
             this.AddBindings(new Dictionary<object, string>
                 {
-                    { source, "ItemsSource Hands" }
+                    { source, "ItemsSource Hands;SelectionChangedCommand NavigationCommand" }
                 });
 
             TableView.Source = source;

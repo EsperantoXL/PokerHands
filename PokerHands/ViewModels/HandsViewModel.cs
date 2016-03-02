@@ -1,6 +1,7 @@
 ﻿using System;
 using MvvmCross.Core.ViewModels;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
 
 namespace PokerHands.Core
 {
@@ -39,6 +40,20 @@ namespace PokerHands.Core
             }
         }
 
-        //We need to capture the moment a hand is pressed
+        /// <summary>
+        /// Gets the hand command.
+        /// </summary>
+        /// <value>The hand command.</value>
+        public ICommand NavigationCommand
+        {
+            get
+            {
+                return new MvxCommand(() =>
+                    {
+                        //how are we going to pass the selected item to this view
+                        ShowViewModel<HandDetailViewModel>();
+                    });
+            }
+        }
     }
 }

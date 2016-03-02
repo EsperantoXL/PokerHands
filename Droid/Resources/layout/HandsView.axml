@@ -7,6 +7,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        local:MvxBind="ItemsSource Hands" 
+        local:MvxBind="ItemsSource Hands;ItemClick NavigationCommand" 
        	local:MvxItemTemplate="@layout/item_hand" />
 </LinearLayout>
