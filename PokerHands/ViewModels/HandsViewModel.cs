@@ -1,5 +1,6 @@
 ﻿using System;
 using MvvmCross.Core.ViewModels;
+using System.Collections.ObjectModel;
 
 namespace PokerHands.Core
 {
@@ -14,7 +15,21 @@ namespace PokerHands.Core
         {
         }
 
-        //We need a collection of hand objects
+        private ObservableCollection<Hand> _hands;
+
+        /// <summary>
+        /// Gets or sets the collection of poker hands.
+        /// </summary>
+        /// <value>The hands.</value>
+        public ObservableCollection<Hand> Hands
+        {
+            get { return _hands; }
+            set
+            {
+                _hands = value;
+                RaisePropertyChanged(() => Hands);
+            }
+        }
 
         //We need to capture the moment a hand is pressed
     }
