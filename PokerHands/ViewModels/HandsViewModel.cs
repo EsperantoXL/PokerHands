@@ -9,10 +9,11 @@ namespace PokerHands.Core
     /// </summary>
     public class HandsViewModel : MvxViewModel
     {
-        //we need to setup a constructor 
-        //with a nice service to provide the hands
-        public HandsViewModel()
+        private readonly IHandService _handService;
+
+        public HandsViewModel(IHandService handService)
         {
+            _handService = handService;
         }
 
         private ObservableCollection<Hand> _hands;
