@@ -48,10 +48,10 @@ namespace PokerHands.Core
         {
             get
             {
-                return new MvxCommand(() =>
+                return new MvxCommand<Hand>(hand =>
                     {
                         //how are we going to pass the selected item to this view
-                        ShowViewModel<HandDetailViewModel>();
+                        ShowViewModel<HandDetailViewModel>(hand);
                     });
             }
         }
