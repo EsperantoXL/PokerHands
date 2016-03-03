@@ -1,0 +1,1 @@
+This project is create for Hogeschool Utrect (http://www.hu.nl) and is a showcase for Xamarin. 
