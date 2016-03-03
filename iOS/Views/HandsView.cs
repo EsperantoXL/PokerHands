@@ -18,7 +18,10 @@ namespace PokerHands.iOS
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            //we need to add a cell as well
+
+            //we need to set the navigation bar to be non trancelucent 
+            NavigationController.NavigationBar.Translucent = false;
+
             var source = new HandsTableViewSource(TableView);
             this.AddBindings(new Dictionary<object, string>
                 {

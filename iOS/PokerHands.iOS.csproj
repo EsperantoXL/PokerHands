@@ -128,6 +128,7 @@
     <InterfaceDefinition Include="Views\FirstView.xib" />
     <InterfaceDefinition Include="Views\HandsView.xib" />
     <InterfaceDefinition Include="Views\HandCell.xib" />
+    <InterfaceDefinition Include="Views\HandDetailView.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -155,6 +156,10 @@
     <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
     <Compile Include="Views\HandsTableViewSource.cs" />
+    <Compile Include="Views\HandDetailView.cs" />
+    <Compile Include="Views\HandDetailView.designer.cs">
+      <DependentUpon>HandDetailView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
