@@ -8,17 +8,22 @@
     <MvxImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        local:MvxBind="ImageUrl Hand.ImageUrl" />
+        local:MvxBind="ImageUrl Hand.ImageUrl"
+        android:layout_marginTop="5dp" />
     <TextView
         local:MvxBind="Text Hand.Title"
         android:textColor="@android:color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp" />
     <TextView
         local:MvxBind="Text Hand.Description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp" />
 </LinearLayout>
